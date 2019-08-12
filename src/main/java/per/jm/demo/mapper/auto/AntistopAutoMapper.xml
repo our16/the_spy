@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.jm.demo.mapper.auto.AntistopAutoMapper">
+  <resultMap id="BaseResultMap" type="per.jm.demo.pojo.autp.AntistopAuto">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="fisrt" jdbcType="VARCHAR" property="fisrt" />
+    <result column="second" jdbcType="VARCHAR" property="second" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, fisrt, second
+  </sql>
+  <select id="selectByExample" parameterType="per.jm.demo.pojo.autp.AntistopAutoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from antistop_auto
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from antistop_auto
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from antistop_auto
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="per.jm.demo.pojo.autp.AntistopAutoExample">
+    delete from antistop_auto
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="per.jm.demo.pojo.autp.AntistopAuto">
+    insert into antistop_auto (id, fisrt, second
+      )
+    values (#{id,jdbcType=INTEGER}, #{fisrt,jdbcType=VARCHAR}, #{second,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="per.jm.demo.pojo.autp.AntistopAuto">
+    insert into antistop_auto
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="fisrt != null">
+        fisrt,
+      </if>
+      <if test="second != null">
+        second,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="fisrt != null">
+        #{fisrt,jdbcType=VARCHAR},
+      </if>
+      <if test="second != null">
+        #{second,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="per.jm.demo.pojo.autp.AntistopAutoExample" resultType="java.lang.Long">
+    select count(*) from antistop_auto
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update antistop_auto
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.fisrt != null">
+        fisrt = #{record.fisrt,jdbcType=VARCHAR},
+      </if>
+      <if test="record.second != null">
+        second = #{record.second,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update antistop_auto
+    set id = #{record.id,jdbcType=INTEGER},
+      fisrt = #{record.fisrt,jdbcType=VARCHAR},
+      second = #{record.second,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="per.jm.demo.pojo.autp.AntistopAuto">
+    update antistop_auto
+    <set>
+      <if test="fisrt != null">
+        fisrt = #{fisrt,jdbcType=VARCHAR},
+      </if>
+      <if test="second != null">
+        second = #{second,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="per.jm.demo.pojo.autp.AntistopAuto">
+    update antistop_auto
+    set fisrt = #{fisrt,jdbcType=VARCHAR},
+      second = #{second,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

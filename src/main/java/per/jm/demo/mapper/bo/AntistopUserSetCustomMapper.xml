@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.jm.demo.mapper.bo.AntistopUserSetCustomMapper">
+  <resultMap id="BaseResultMap" type="per.jm.demo.pojo.autp.AntistopUserSet">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="first" jdbcType="VARCHAR" property="first" />
+    <result column="second" jdbcType="VARCHAR" property="second" />
+    <result column="openid" jdbcType="VARCHAR" property="openid" />
+  </resultMap>
+
+  <select id="selectByExample"  resultMap="BaseResultMap">
+    select *
+    from antistop_userset limit #{0},#{1}
+  </select>
+</mapper>

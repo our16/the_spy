@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+}
+.screen{
+    width:100%;
+    min-height: 55vw;
+    font-size: 5vw;
+    background-color: darkgrey;
+    border-radius: 5vw;
+}
+.header-panel{
+    position: relative;
+  left: 35%;
+}
+#size{
+    width: 48vw;
+    height: 10vw;
+    font-size: 5vw;
+}
+#first{
+    width: 48vw;
+    height: 10vw;
+    font-size: 5vw;
+}
+#second{
+    width: 48vw;
+    height: 10vw;
+    font-size: 5vw;
+}
+.buttons{
+    font-size: 5vw;
+    width: 16vw;
+    height: 8vw;
+    border-radius: 5vw;
+}
+#roomId{
+    font-size: 5vw;
+}
+#display{
+    font-size: 5vw;
+}
+.chang{
+    font-size: 5vw;
+    width: 24vw;
+    height: 10vw;
+    border-radius: 5vw;
+}
