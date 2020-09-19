@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CheckSignature {
-    public static String CheckSignature(String str){
+
+
+    public static String CheckSignatures(String str){
         String[] content=str.split("&");
         String signature=content[0].split("=")[1];
         String timestamp=content[2].split("=")[1];

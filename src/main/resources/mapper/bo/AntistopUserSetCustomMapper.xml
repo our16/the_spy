@@ -10,6 +10,6 @@
 
   <select id="selectByExample"  resultMap="BaseResultMap">
     select *
-    from antistop_userset limit #{0},#{1}
+    from antistop_userset limit #{page},#{size}
   </select>
 </mapper>

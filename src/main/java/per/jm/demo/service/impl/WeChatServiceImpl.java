@@ -20,6 +20,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static per.jm.demo.util.CheckSignature.CheckSignatures;
 import static per.jm.demo.util.ResolveWeChatMessageUtil.getXmlText;
 
 
@@ -401,20 +402,20 @@ public class WeChatServiceImpl implements WeChatService {
      /*微信验证接口*/
     public static  void VerifyWeChatInterface(HttpServletRequest request, HttpServletResponse response){
         /* 获取get 请求的参数 */
-//        String content = request.getQueryString();
-//        if (content != null && content.startsWith("signature")) {
-//            String echostr = CheckSignature(content);
-//           // System.out.println(echostr);
-//            PrintWriter out2 = null;
-//            try {
-//                out2 = response.getWriter();
-//                /*返回echostr给微信服务器*/
-//                out2.print(echostr);
-//            } catch (IOException e) {
-//                System.out.println(e.getCause());
-//            }finally {
-//                out2.close();
-//            }
-//        }
+        String content = request.getQueryString();
+        if (content != null && content.startsWith("signature")) {
+            String echostr = CheckSignatures(content);
+           // System.out.println(echostr);
+            PrintWriter out2 = null;
+            try {
+                out2 = response.getWriter();
+                /*返回echostr给微信服务器*/
+                out2.print(echostr);
+            } catch (IOException e) {
+                System.out.println(e.getCause());
+            }finally {
+                out2.close();
+            }
+        }
     }
 }

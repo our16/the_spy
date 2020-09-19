@@ -12,6 +12,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.junit.jupiter.api.Test;
 
 
 import java.io.*;
@@ -26,8 +27,8 @@ import com.weixin.menu.ViewButton;
 */
 
 public class MenuUtil {
-    private static final String APPID = "wxd81ea542b764f58f";
-    private static final String APPSECRET = "87525592ee6fbcc42d46ea5807c60fed";
+    private static final String APPID = "wxe9eec0ce";
+    private static final String APPSECRET = "022c5cf4d6aa9b";
     private static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     private static final String CREATE_MENU_URL = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
 
@@ -188,7 +189,7 @@ public class MenuUtil {
         //*******************************
         view1.put("type","view");
         view1.put("name","在线创建房间");
-        view1.put("url",new WxUtil().getRedict_url("http://duifenyi.our16.op/spy"));
+        view1.put("url",new WxUtil().getRedict_url("https://op"));
         //*******************************
         child1.put("type","click");
         child1.put("name","管理房间");
@@ -241,7 +242,7 @@ public class MenuUtil {
                "           {   \n" +
                "               \"type\":\"view\",\n" +
                "               \"name\":\"我的博客\",\n" +
-               "               \"url\":\"http://jm.our16.top/MyBlog/\"\n" +
+               "               \"url\":\"http:/op/MyBlog/\"\n" +
                "            },\n" +
                "{" +
                "\"type\":\"click\"" +

@@ -2,7 +2,7 @@ package per.jm.demo.demo;
 
 
 import com.alibaba.fastjson.JSONObject;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import per.jm.demo.pojo.bo.GameRoom;
 import per.jm.demo.service.impl.GameServiceImpl;
 import per.jm.demo.util.MenuUtil;

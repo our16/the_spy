@@ -11,6 +11,6 @@
     select
     *
     from antistop_auto
-    limit #{0},#{1}
+    limit #{page},#{size}
   </select>
 </mapper>

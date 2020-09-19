@@ -1,18 +1,18 @@
 package per.jm.demo.pojo.bo;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+
+import org.springframework.boot.autoconfigure.batch.BatchProperties;
+import org.springframework.scheduling.annotation.Scheduled;
 import per.jm.demo.util.GameRoomFactory;
 import per.jm.demo.util.GameRoomIdForPlayer;
 
 import java.util.List;
 import java.util.Map;
 
-public class MyJob implements Job{
+public class MyJob extends BatchProperties.Job {
 
-    //@Scheduled(cron = "0/2 * * * * ? ") //使用xml配置不需要，使用注解需要
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+    @Scheduled(cron = "0/2 * * * * ? ") //使用xml配置不需要，使用注解需要
+    public void execute() {
         System.out.println("定时器开始工作：清除超时的房间");
         //获取当前指针位置
         QueesList queesList = RingQuees.getRooms().get("timer");

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="internal.snapshots" />
+      <option name="name" value="internal.snapshots" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/thirdparty-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mqq.snapshots" />
+      <option name="name" value="mqq.snapshots" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/mqq/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tdw-release-repo" />
+      <option name="name" value="tdw-release-repo" />
+      <option name="url" value="http://maven.data.oa.com/nexus/content/repositories/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="internal.releases" />
+      <option name="name" value="internal.releases" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/thirdparty/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent-public" />
+      <option name="name" value="tencent-public" />
+      <option name="url" value="https://mirrors.tencent.com/nexus/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/central/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring.releases" />
+      <option name="name" value="spring.releases" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/springmilestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent-thirdparty-snapshots" />
+      <option name="name" value="tencent-thirdparty-snapshots" />
+      <option name="url" value="https://mirrors.tencent.com/repository/maven/thirdparty-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent-internal-public" />
+      <option name="name" value="tencent-internal-public" />
+      <option name="url" value="https://mirrors.tencent.com/repository/maven/tencent_public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jcenter.releases" />
+      <option name="name" value="jcenter.releases" />
+      <option name="url" value="http://maven.oa.com/nexus/content/repositories/jcenter/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent-thirdparty" />
+      <option name="name" value="tencent-thirdparty" />
+      <option name="url" value="https://mirrors.tencent.com/repository/maven/thirdparty/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent-internal-release" />
+      <option name="name" value="tencent-internal-release" />
+      <option name="url" value="https://mirrors.tencent.com/repository/maven/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tencent_public_snapshots" />
+      <option name="name" value="tencent_public_snapshots" />
+      <option name="url" value="https://mirrors.tencent.com/repository/maven/tencent_public_snapshots/" />
+    </remote-repository>
+  </component>
+</project>

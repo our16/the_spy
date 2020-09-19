@@ -49,8 +49,9 @@ public class AddGameAntistopImpl implements AddGameAntistop {
     }
     @Override
     public JSONObject getAntistop(String openId,int page) {
-
-        List<AntistopUserSet> all  = antistopUserSetCustomMapper.selectByExample(0,10000);
+        if(page < 1)
+            page = 1;
+        List<AntistopUserSet> all  = antistopUserSetCustomMapper.selectByExample(page,10000);
         List<AntistopUserSet> antistopUserSetList = antistopUserSetCustomMapper.selectByExample(page,1);
         JSONObject jo = new JSONObject();
         if(antistopUserSetList.size() > 0) {
@@ -61,9 +62,7 @@ public class AddGameAntistopImpl implements AddGameAntistop {
         }else
         {
             page = page - all.size();
-            if(page < 0)
-                page = 0;
-            List<AntistopAuto> all2 = antistopAutoCustomMapper.selectByExample(0,10000);
+            List<AntistopAuto> all2 = antistopAutoCustomMapper.selectByExample(page,10000);
             if(page > all2.size() -1)
                 page = all2.size() -1;
             List<AntistopAuto> antistopAutoList = antistopAutoCustomMapper.selectByExample(page,1);
